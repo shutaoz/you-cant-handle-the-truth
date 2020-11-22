@@ -13,7 +13,11 @@ public class HandleTruthTest {
         Assert.assertNull(HandleTruth.wordCount(null));
 
 
-        //case 2 when the parameter is valid, it should return the expected stirng
+        //case 2 when the parameter is valid
+        //wordCount should return the expected stirng
+        String test2 = "a a a b b c";
+        String expected2 = "3=[a]2=[b]1=[c]";
+        Assert.assertEquals(expected2, HandleTruth.wordCount(test2));
 
 
         //case 3
