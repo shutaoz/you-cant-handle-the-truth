@@ -33,6 +33,10 @@ public class HandleTruthTest {
         Assert.assertEquals(expected4, HandleTruth.wordCount(test4));
 
 
-        //case 5
+        //case 5 when the parameter is valid but differ from the one used in case 4
+        //word count should return the expected string
+        String test5 = "abc abc bbb ccc";
+        String expected5 = "2=[abc]1=[ccc, bbb]";
+        Assert.assertEquals(expected5, HandleTruth.wordCount(test5));
     }
 }
