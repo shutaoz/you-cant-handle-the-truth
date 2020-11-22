@@ -14,19 +14,24 @@ public class HandleTruthTest {
 
 
         //case 2 when the parameter is valid
-        //wordCount should return the expected stirng
+        //wordCount should return the expected string
         String test2 = "a a a b b c";
         String expected2 = "3=[a]2=[b]1=[c]";
         Assert.assertEquals(expected2, HandleTruth.wordCount(test2));
 
 
-        //case 3 when the parameter is valid but different from the one used in case 2
+        //case 3 when the parameter is valid but differ from the one used in case 2
         //wordCount should return the expected string
         String test3 = "a b c a b c a b c a a b d e";
         String expected3 = "5=[a]4=[b]3=[c]1=[d, e]";
         Assert.assertEquals(expected3, HandleTruth.wordCount(test3));
 
-        //case 4
+        //case 4 when the parameter is valid but differ from the one used in case 3
+        //wordCount should return the expected string
+        String test4 = "a b c d e f g c d d d";
+        String expected4 = "4=[d]2=[c]1=[a, b, e, f, g]";
+        Assert.assertEquals(expected4, HandleTruth.wordCount(test4));
+
 
         //case 5
     }
